@@ -217,7 +217,7 @@ float Get4dNoiseZeroToOne( int posX, int posY, int posZ, int posT, int seed )
 float Get1dNoiseNegOneToOne( int index, int seed )
 {
 	int result = Get1dNoise( index, seed );
-	return ( 1.0 * (result - INT_32_UNSIGNED_MAX) ) / INT_32_SIGNED_MAX;
+	return ( 1.0 * (result - INT_32_SIGNED_MAX) ) / INT_32_SIGNED_MAX;
 }
 
 
@@ -225,14 +225,14 @@ float Get1dNoiseNegOneToOne( int index, int seed )
 float Get2dNoiseNegOneToOne( int posX, int posY, int seed )
 {
 	int result = Get2dNoise( posX, posY, seed );
-	return ( 1.0 * (result - INT_32_UNSIGNED_MAX) ) / INT_32_SIGNED_MAX;
+	return ( 1.0 * (result - INT_32_SIGNED_MAX) ) / INT_32_SIGNED_MAX;
 }
 
 //--------------------------------------------------------------------------
 float Get3dNoiseNegOneToOne( int posX, int posY, int posZ, int seed )
 {
 	int result = Get3dNoise( posX, posY, posZ, seed );
-	return ( 1.0 * (result - INT_32_UNSIGNED_MAX) ) / INT_32_SIGNED_MAX;
+	return ( 1.0 * (result - INT_32_SIGNED_MAX) ) / INT_32_SIGNED_MAX;
 }
 
 
@@ -240,7 +240,7 @@ float Get3dNoiseNegOneToOne( int posX, int posY, int posZ, int seed )
 float Get4dNoiseNegOneToOne( int posX, int posY, int posZ, int posT, int seed )
 {
 	int result = Get4dNoise( posX, posY, posZ, posT, seed );
-	return ( 1.0 * (result - INT_32_UNSIGNED_MAX) ) / INT_32_SIGNED_MAX;
+	return ( 1.0 * (result - INT_32_SIGNED_MAX) ) / INT_32_SIGNED_MAX;
 }
 
 #endif
